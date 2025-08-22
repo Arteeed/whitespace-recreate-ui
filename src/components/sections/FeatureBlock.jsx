@@ -13,11 +13,12 @@ export function FeatureBlock({
 }) {
   return (
     <section
-      className={`${bgColor} ${textColor} flex items-center justify-around text-center lg:text-left xl:gap-10 ${reverse ? "lg:flex-row-reverse flex-col-reverse" : "lg:flex-row flex-col"}`}
+      className={`${bgColor} ${textColor} flex items-center justify-around text-center lg:text-left xl:gap-10 ${reverse ? "flex-col-reverse lg:flex-row-reverse" : "flex-col lg:flex-row"}`}
     >
       <div className="my-10 lg:mx-5 xl:w-xl">
         <h1 className="mb-5 text-4xl font-bold lg:text-5xl xl:text-6xl">
-          {title}{" "}<span className="bg-[url(./assets/Element.svg)] bg-contain bg-bottom bg-no-repeat">
+          {title}{" "}
+          <span className="bg-[url(./assets/Element.svg)] bg-contain bg-bottom bg-no-repeat">
             {highlightedText}
           </span>
         </h1>
