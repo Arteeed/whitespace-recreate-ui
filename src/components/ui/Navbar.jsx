@@ -2,6 +2,7 @@ import { useState } from "react";
 import ArrowRight from "../../assets/icons/ArrowRight";
 import MenuIcon from "../../assets/icons/MenuIcon";
 import Logo from "../../assets/Logo.svg";
+import { Link } from "react-router-dom";
 
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -15,16 +16,16 @@ function Navbar() {
       <img className="h-6 cursor-pointer" src={Logo} alt="" />
       <ul className="hidden items-center px-2 text-secondary-white md:flex md:gap-6">
         <li>
-          <a className="hover:text-secondary-yellow" href="#">Products</a>
+          <Link to={"/Products"} className="hover:text-secondary-yellow">Products</Link>
         </li>
         <li>
-          <a className="hover:text-secondary-yellow" href="#">Solutions</a>
+          <Link to={"/Solutions"} className="hover:text-secondary-yellow">Solutions</Link>
         </li>
         <li>
-          <a className="hover:text-secondary-yellow" href="#">Resources</a>
+          <Link to={"/Resources"} className="hover:text-secondary-yellow">Resources</Link>
         </li>
         <li>
-          <a className="hover:text-secondary-yellow" href="#">Pricing</a>
+          <Link to={"/Pricing"} className="hover:text-secondary-yellow">Pricing</Link>
         </li>
       </ul>
 
@@ -32,16 +33,16 @@ function Navbar() {
         isOpen ? 'flex' : 'hidden'
       }`}>
         <li className="py-2 border-b border-secondary-white/20 w-full text-center">
-          <a href="#">Products</a>
+          <Link to={"/Products"}>Products</Link>
         </li>
         <li className="py-2 border-b border-secondary-white/20 w-full text-center">
-          <a href="#">Solutions</a>
+          <Link to={"/Solutions"}>Solutions</Link>
         </li>
         <li className="py-2 border-b border-secondary-white/20 w-full text-center">
-          <a href="#">Resources</a>
+          <Link to={"/Resources"}>Resources</Link>
         </li>
         <li className="py-2 w-full text-center">
-          <a href="#">Pricing</a>
+          <Link to={"/Pricing"}>Pricing</Link>
         </li>
       </ul>
       <div className="flex items-center gap-3">
